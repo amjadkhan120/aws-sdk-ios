@@ -41,11 +41,22 @@ extern NSString *const AWSTaskMultipleErrorsUserInfoKey;
  */
 @interface AWSTask<__covariant ResultType> : NSObject
 
+/*
+ Amjad: 15th Jan 2019 : Custom property set for Note Id
+ */
+
+@property (nullable, nonatomic, strong) NSString *taskDescription;
+
 /*!
  A block that can act as a continuation for a task.
  */
 typedef __nullable id(^AWSContinuationBlock)(AWSTask<ResultType> *t);
 
+/*
+ Amjad: 3rd March 2019 
+ */
+
+- (id)copyWithZone:(NSZone *)zone;
 /*!
  Creates a task that is already completed with the given result.
  @param result The result for the task.
