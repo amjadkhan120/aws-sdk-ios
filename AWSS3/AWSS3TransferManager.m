@@ -24,10 +24,10 @@
 static NSString *const AWSInfoS3TransferManager = @"S3TransferManager";
 
 // Private constants
-NSUInteger const AWSS3TransferManagerMinimumPartSize = 5 * 1024 * 1024; // 5MB
+NSUInteger const AWSS3TransferManagerMinimumPartSize = 1 * 1024 * 1024 * 1024; // 1 GB
 NSString *const AWSS3TransferManagerCacheName = @"com.amazonaws.AWSS3TransferManager.CacheName";
 NSString *const AWSS3TransferManagerErrorDomain = @"com.amazonaws.AWSS3TransferManagerErrorDomain";
-NSUInteger const AWSS3TransferManagerByteLimitDefault = 5 * 1024 * 1024; // 5MB
+NSUInteger const AWSS3TransferManagerByteLimitDefault = 1 * 1024 * 1024 * 1024; // 1 GB
 NSTimeInterval const AWSS3TransferManagerAgeLimitDefault = 0.0; // Keeps the data indefinitely unless it hits the size limit.
 NSString *const AWSS3TransferManagerUserAgentPrefix = @"transfer-manager";
 
