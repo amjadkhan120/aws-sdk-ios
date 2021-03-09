@@ -276,7 +276,14 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
             if (isAccelerateModeEnabled) {
                 host = [NSString stringWithFormat:@"%@.%@", bucketName, AWSS3PreSignedURLBuilderAcceleratedEndpoint];
             } else {
-                host = [NSString stringWithFormat:@"%@.%@", bucketName, endpoint.hostName];
+                /*
+                 * Amjad: AWS URL scehme is different from our at Convo
+                 * So Changing
+                 * [NSString stringWithFormat:@"%@.%@", bucketName, endpoint.hostName];
+                 * to
+                 * [NSString stringWithFormat:@"%@", endpoint.hostName];
+                 */
+                host = [NSString stringWithFormat:@"%@", endpoint.hostName];
             }
         } else {
             host = endpoint.hostName;

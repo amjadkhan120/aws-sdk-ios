@@ -80,7 +80,10 @@
 
     AWSDDLogDebug(@"Updating request to use virtual-host style URL");
     [self updatePathComponentForVirtualHostStyleURL:components byMutatingPathParts:pathParts];
-    [self updateHostComponentForVirtualHostStyleURL:components bucketName:bucketName];
+    /*
+     * Amjad: This disturbs the Minio URL scheme, So commenting for Convo.
+     */
+    //[self updateHostComponentForVirtualHostStyleURL:components bucketName:bucketName];
 
     NSURL *newURL = [components URL];
 
