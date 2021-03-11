@@ -2,7 +2,21 @@
 
 ## Unreleased
 
--Features for next release
+### Bug fixes
+
+- **AWSCognitoIdentityProvider**
+  - Fix ignored `isInitialCustomChallenge` parameter in `AWSCognitoIdentityUser` ([PR #3461](https://github.com/aws-amplify/aws-sdk-ios/pull/3461)). Thanks @johntmcintosh!
+
+### Misc. Updates
+
+- Model updates for the following services
+  - AWSEC2
+
+## 2.23.1
+
+### Bug fixes
+- **AWSMobileClient**
+  - Fix callback URL scheme in ASWebAuthenticationSession handling ([PR #3456](https://github.com/aws-amplify/aws-sdk-ios/pull/3456))
 
 ### Misc. Updates
 
